@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&amp;display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+	<!-- Link to SWIPER-FILE css -->
+    <link rel="stylesheet" href="./library/swiper/swiper-bundle.min.css">
+	<!-- Link to FONTAWESOME css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<!-- Link to AOS-FILE css -->
+    <link rel="stylesheet" href="./library/AOS/aos.css">
+	<!-- Link to ANIMATE-FILE css -->
+    <link rel="stylesheet" href="./library/animate/animate.min.css">
+	<!-- Link to SLICK-FILE css -->
+    <link rel="stylesheet" href="./library/slick/slick.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="container-fluid" id="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="top-left">
+              <p>Welcome message for your customer...</p>
+            </div>
+            <div class="top-right"><span>Language:</span>
+              <select id="language-chose">
+                <option selected=""> ENGLISH</option>
+                <option>FRENCH</option>
+                <option>GERMAN</option>
+              </select><span>Dollar: $ </span>
+              <select id="dollar">
+                <option selected="">USD</option>
+                <option>VND</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="header-contact">
+          <div class="container">
+            <div class="contact-info">
+              <ul>
+                <li><i class="fa fa-envelope"></i>
+                  <p> DezignElite@Gmail.com</p>
+                </li>
+                <li><i class="fa fa-phone"></i>
+                  <p> Toll Free 0-988-345-4567</p>
+                </li>
+                <li><i class="fa fa-clock"></i>
+                  <p> Mon - Sat 9.00 - 19.00</p>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-social">
+              <div class="contact-address"><i class="fa fa-map-marker-alt"></i>
+                <p>
+                   32s Brooklyn St, Colins
+                                  Street, West Victoria, 8007-Australia.
+                </p>
+              </div>
+              <div class="social-icon">
+                <ul>
+                  <li><a href=""></a><i class="fab fa-facebook-f"></i></li>
+                  <li><a href=""></a><i class="fab fa-twitter"></i></li>
+                  <li><a href=""></a><i class="fab fa-linkedin-in"></i></li>
+                  <li><a href=""></a><i class="fab fa-pinterest"></i></li>
+                  <li><a href=""></a><i class="fa fa-rss"></i></li>
+                  <li><a href=""></a><i class="fab fa-google-plus-g"></i></li>
+                  <li><a href=""></a><i class="fab fa-vimeo"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="contact-search">
+              <input type="text" name="search">
+              <input type="submit" value="Search">
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid" id="navBar">
+        <div class="container topnav">
+          <div class="nav-img"><img src="./images/Logo.png" alt=""></div>
+          <div class="navbar-list" id="navbarId">
+            <ul>
+                    <li> <a class="nav-link" href="./index.html">Home</a></li>
+                    <li> <a class="nav-link" href="./aboutus.html">About Us</a></li>
+                    <li> <a class="nav-link" href="./services.html">Services</a></li>
+                    <li><a class="nav-link active" href="./project.html">Project</a></li>
+                    <li> <a class="nav-link" href="./contactus.html">Contact</a></li>
+            </ul><a class="icon" href="javascript:void(0);" onclick="navBaradd()"><i class="fa fa-bars"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="project">
+        <div class="breadcrumb">
+          <div class="breadcrumb-content">
+            <h1>See Our Latest Projects</h1>
+            <p>Home <i class="fa fa-angle-double-right"></i><span>Project</span></p>
+          </div>
+        </div>
+        <div class="container project-content">
+          <div class="project-content-menu">
+            <ul>
+              <li class="active"><a href="">ALL WORKS</a>
+                <div class="style__number">
+                  <p>12</p>
+                </div>
+              </li>
+              <li><a href="">MODERN</a>
+                <div class="style__number">
+                  <p>13</p>
+                </div>
+              </li>
+              <li><a href="">INTERIOR</a>
+                <div class="style__number">
+                  <p>17</p>
+                </div>
+              </li>
+              <li><a href="">EXTERIOR</a>
+                <div class="style__number">
+                  <p>22</p>
+                </div>
+              </li>
+              <li><a href="">PLUMBING</a>
+                <div class="style__number">
+                  <p>36</p>
+                </div>
+              </li>
+              <li><a href="">BUILDING</a>
+                <div class="style__number">
+                  <p>24</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="project-content-img">
+            <div class="project_img"><img class="img-fluid" src="./images/project01.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern</p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project02.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project03.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project04.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project01.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project02.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project03.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project04.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+            <div class="project_img"><img class="img-fluid" src="./images/project01.jpg" alt="">
+              <div class="project_img--overlay">
+                <div class="plus"></div>
+                <div class="project_img--hotel"> 
+                  <p>Western Hotel</p>
+                </div>
+                <div class="project_img--text"> 
+                  <p>Modern          </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container project-button">
+          <button class="btn">View More</button>
+        </div>
+      </div>
+      <footer class="container-fluid" id="footer">
+        <div class="container footer-content">
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-list">
+              <ul>
+                <li><i class="fa fa-map-marker-alt"></i>
+                  <p>Address: <span>
+                      1600 Pennsylvania Ave NW, Washington, DC 20500, United
+                      States</span></p>
+                </li>
+                <li><i class="fa fa-phone"></i>
+                  <p> Phone: <span>(+321) 25 365 7845</span></p>
+                </li>
+                <li><i class="fa fa-envelope"></i>
+                  <p>Email: <span>ForestThemes@gmail.com</span></p>
+                </li>
+                <li><i class="fa fa-clock"></i>
+                  <p> Monday - Friday : <span>9.00 am to 17.00 pm</span><br>Saturday - Sunday : <span>Closed</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-tweets">
+            <h4>latest tweets</h4>
+            <div class="footer-tweets-list">
+              <ul>
+                <li><i class="fab fa-twitter"></i>
+                  <p><span>@ForBuilders</span> themess Meet Creativ version 2.1.
+                                        A lot of new things are coming soon. Jun. 29, 2014
+                  </p>
+                </li>
+                <li><i class="fab fa-twitter"></i>
+                  <p> @business themess Meet <span>ForBuilders </span> version A lot of new things are
+                                        coming soon. Jun. 29, 2014
+                  </p>
+                </li>
+                <li><i class="fab fa-twitter"></i>
+                  <p><span>business themess </span>@ Meet <span>ForBuilders </span> version A lot of new things are
+                    coming soon version 2.1 Jun. 29, 2014
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-form">
+            <h4>say hello</h4>
+            <form class="footer-content-form" action="">
+              <div class="input-profile">
+                <div class="input-profile-name">
+                  <input type="text" name="Name" placeholder="Name"><i class="fa fa-user"></i>
+                </div>
+                <div class="input-profile-email">
+                  <input type="text" name="Email" placeholder="Email"><i class="fa fa-envelope"></i>
+                </div>
+              </div>
+              <div class="form-textarea">
+                <textarea type="textarea" rows="3" placeholder="Message"></textarea><i class="fa fa-pen"></i>
+              </div>
+              <div class="form-button">
+                <input type="submit" value="Send">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-copyrights container-fluid">
+          <div class="container copyrights">
+            <div class="copyrights-left">
+              <p>Copyright &copy; 2015 ForBuilders. Designed &hearts; Forest _ Themes</p>
+            </div>
+            <div class="copyrights-right">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+	<!-- Link to SWIPER-FILE js-->
+    <script src="./library/swiper/swiper-bundle.min.js"></script>
+	<!-- Link to FONTAWESOME js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+	<!-- Link to AOS-FILE js-->
+    <script src="./library/AOS/aos.js"></script>
+	<!-- Link to SLICK-FILE js-->
+    <script src="./library/slick/slick.min.js"></script>
+    <script>
+      //- AOS.init();
+      AOS.init({
+        disable: 'mobile'
+      })
+      
+      
+    </script>
+    <script src="./js/back-to-top.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      
+      
+        $('.slick-slider').slick({
+          arrows: true,
+          slidesToShow: true,
+          dots: true,
+          infinite: false, 
+          speed: 500,
+          fade: true,
+          cssEase: 'linear',
+          //- autoplay: true,
+          autoplaySpeed: 2000,
+        });
+      
+      
+        $('.feature-carousel').slick({
+          arrows: false, //- true,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          cssEase: 'linear',
+          dots: true,
+          vertical:false,
+          //- fade: false,
+      
+          responsive: [
+          {
+              breakpoint: 1024,
+              settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
+              }
+          },
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3
+              }
+          },
+          {
+              breakpoint: 576,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+              }
+          }
+      
+          ]
+      
+      
+      
+      
+        });
+      
+        $('.testimonal-slider').slick({
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          cssEase: 'linear',
+          dots: true,
+          vertical:true,
+          verticalSwiping: true
+        });
+      
+      
+      
+        $('.gallery-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          // fade: true,
+          asNavFor: '.gallery-nav'
+        });
+        $('.gallery-nav').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: '.gallery-for',
+          dots: false,
+          centerMode: true,
+          arrows: false,
+          focusOnSelect: true,
+          centerPadding: '0px',
+        });
+      
+      
+        $('.aboutus-testimonal').slick();
+        });
+      
+      
+    </script>
+    <script>
+      function categoriesOnOff() {
+        var x = document.getElementById("categories-item");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      
+      
+      
+    </script>
+    <script>
+      function navBaradd() {
+      var x = document.getElementById("navbarId");
+      if (x.className === "navbar-list") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar-list";
+      }
+      }
+      
+      
+      
+    </script>
+    <!-- Initialize Swiper-->
+    <script>
+      var swiper = new Swiper(".swiper-testimonal", {
+      direction: "vertical",
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 0,
+      mousewheel: true,
+      pagination: {
+      el: ".swiper-testimonal__pagination",
+      clickable: true,
+      },
+      });
+      var swiper = new Swiper(".swiper-feature", {
+      // slidesPerView: 1,
+      // spaceBetween: 0,
+      navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+      640: {
+      slidesPerView: 2,
+      },
+      768: {
+      slidesPerView: 4,
+      },
+      1024: {
+      slidesPerView: 5,
+      },
+      },
+      });
+      
+      
+      
+      
+    </script>
+    <script>
+      window.onscroll = function () {
+      myFunction();
+      };
+      function myFunction() {
+      if (
+      document.body.scrollTop > 0 ||
+      document.documentElement.scrollTop > 0
+      ) {
+      document.getElementById("navbaradd").classList.add("navbar__add");
+      } else {
+      document.getElementById("navbaradd").classList.remove("navbar__add");
+      }
+      }
+      
+      
+      
+    </script>
+    <script>
+      function reveal() {
+        var reveals = document.querySelectorAll("#items-progress");
+      
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 100;
+      
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("progress-bar");
+          } else {
+            reveals[i].classList.remove("progress-bar");
+          }
+        }
+      }
+      
+      window.addEventListener("scroll", reveal);
+    </script>
+  </body>
+</html>
