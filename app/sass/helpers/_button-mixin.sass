@@ -1,0 +1,116 @@
+$btn-display: inline-block  !default
+$btn-padding-x: 12px !default
+$btn-padding-y: 20px !default
+$btn-margin: 0px !default
+$btn-border-width: 0px !default
+$btn-border-radius: 0px !default
+$btn-font-family: null !default
+$btn-font-size: 14px !default
+$btn-line-height: 1.5 !default
+$btn-text-align: center !default  
+$btn-transition-duration: 0.4s !default
+$btn-transition-property: background-color, color, border-color !default
+$btn-vertical-align: middle  !default
+$btn-text-decoration: none !default
+
+$btn-color: #fff
+$btn-background: #007bff
+$btn-bgc-active: #0069d9
+$btn-color-active: #fff
+
+%button
+    color: $btn-color
+    background: $btn-background
+    display: $btn-display
+    padding: $btn-padding-x $btn-padding-y
+    margin: $btn-margin
+    border: $btn-border-width solid $btn-background
+    border-radius: $btn-border-radius
+    font-family: $btn-font-family
+    font-size: $btn-font-size
+    line-height: $btn-line-height
+    text-align: $btn-text-align
+    transition-duration: $btn-transition-duration
+    vertical-align: $btn-vertical-align
+    text-decoration: $btn-text-decoration
+    background: transparent
+    user-select: none
+    outline: 0
+    box-shadow: none
+    &:not(:disabled):not([aria-disabled='true'])        
+        cursor: pointer
+    &:hover,
+    &:focus,
+    &.is-active
+        background: $btn-bgc-active
+        color: $btn-color-active
+        text-decoration: none
+        outline: 0
+        box-shadow: none
+
+
+
+
+
+
+@mixin btn-style($btn-color: $btn-color, $btn-background: $btn-background, $btn-color-active: $btn-color-active, $btn-bgc-active: $btn-bgc-active, $btn-border-radius: $btn-border-radius, $btn-padding-x: $btn-padding-x,  $btn-padding-y: $btn-padding-y, $btn-border-width: $btn-border-width)
+    @extend %button
+    color: $btn-color !important
+    background: $btn-background !important
+    padding: $btn-padding-x $btn-padding-y
+    border-radius: $btn-border-radius
+    border-width: $btn-border-width
+    &:hover,
+    &:focus,
+    &.is-active
+        background: $btn-bgc-active !important
+        color: $btn-color-active !important
+        text-decoration: none
+    @if($btn-border-width > 0)
+        background: transparent !important
+        color: $btn-background !important
+        border-color: $btn-background !important
+        &:hover,
+        &:focus,
+        &.is-active
+            color: $btn-color-active !important
+            background: $btn-bgc-active !important
+            border-color: $btn-bgc-active !important
+
+@mixin btn-style1()
+    @extend %button
+    box-shadow: inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 3px 2px
+    o-box-shadow: inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 3px 2px
+    -moz-box-shadow: inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 3px 2px
+    -webkit-box-shadow: inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 3px 2px
+    background: #2ef1ff
+    background: -o-linear-gradient(90deg, #2ef1ff, #3b9ceb)
+    background: -moz-linear-gradient(center top, #2ef1ff 5%, #3b9ceb 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2ef1ff), color-stop(1, #3b9ceb))
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ef1ff', endColorstr='#3b9ceb')
+    background: -webkit-linear-gradient(#2ef1ff, #3b9ceb)
+    background: -ms-linear-gradient(#2ef1ff, #3b9ceb)
+    background: linear-gradient(#2ef1ff, #3b9ceb)
+    border-radius: 25px
+    text-shadow: #6daac2 2px 2px 6px
+    border-color: #659dab
+    border-width: 2px
+    border-style: solid
+    &:hover,
+    &:focus,
+    &.is-active
+        background: #3b9ceb
+        background: -o-linear-gradient(90deg, #3b9ceb, #2ef1ff)
+        background: -moz-linear-gradient(center top, #3b9ceb 5%, #2ef1ff 100%)
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3b9ceb), color-stop(1, #2ef1ff))
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b9ceb', endColorstr='#2ef1ff')
+        background: -webkit-linear-gradient(#3b9ceb, #2ef1ff)
+        background: -ms-linear-gradient(#3b9ceb, #2ef1ff)
+        background: linear-gradient(#3b9ceb, #2ef1ff)
+        text-decoration: none
+
+
+.button-interested
+    @extend %btn-interested
+    &:hover
+        border: 1px solid #f1c00a

@@ -1,0 +1,57 @@
+//- nav bar link mixin
+- var navbar = [{url: "index.html",title: "Home"},{url: "aboutus.html",title: "About Us"},{url: "services.html",title: "Services"},{url: "project.html",title: "Project"},{url: "contactus.html",title: "Contact"}];
+
+mixin navbar-top(nav)
+    each val, key in nav
+            if(val.url == currentPage)
+                li
+                    a.nav-link.active(href= "./" + val.url)= val.title
+            else 
+                li 
+                    a.nav-link(href= "./" + val.url)= val.title
+            block
+
+
+
+
+#navBar.container-fluid
+    .container.topnav
+        .nav-img
+            img(src='./images/Logo.png', alt='')
+        #navbarId.navbar-list
+            ul
+                +navbar-top(navbar)
+
+            //-     li 
+            //-         a.nav-link.active(href='./index.html') Home
+            //-     li 
+            //-         a.nav-link(href='./aboutus.html') About Us
+
+            //-     li 
+            //-         a.nav-link(href='./services.html') Services
+
+            //-     li 
+            //-         a.nav-link(href='./project.html') Project
+
+            //-     li 
+            //-         a.nav-link(href='./contactus.html') Contact
+
+
+            a.icon(href='javascript:void(0);', onclick='navBaradd()')
+                i.fa.fa-bars
+
+
+
+
+
+
+
+mixin linkActive(pageLink, pageName)
+    if pageLink == current
+        a(href=pageLink.replace('.html',''))= pageName
+
+//- +linkActive('index.html', 'home')
+
+
+
+

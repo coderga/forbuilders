@@ -1,0 +1,343 @@
+#aboutus.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .breadcrumb
+        background-image: url(../images/project-bg.png)
+        height: fit-content
+        padding: 55px 0
+        text-align: center
+        margin-bottom: 100px
+        .breadcrumb-content
+            h1
+                font-size: 24px
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 35px                
+            p
+                font-size: 16px
+                color: #f1c00a
+                i
+                .svg-inline--fa
+                    color: #333333
+                    padding: 0 10px
+                span
+                    color: #333333
+    .container
+        @extend %container
+        .aboutus__misvion
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-bottom: 100px
+            gap: 10px
+            @include responsive-desktop(mobile)
+                display: block
+
+            .misvion-card
+                flex: 0 1 calc(33% - 20px)
+                width: 100%
+                margin-bottom: 30px
+                @include responsive-desktop(tablet)
+                    flex: 0 1 calc(50% - 10px)                
+                img
+                    // width: 370px
+                    width: 100%
+                    min-width: 170px
+                    height: 200px
+                    object-fit: cover
+                h4
+                    font-size: 20px
+                    font-weight: 700
+                    color: #333333
+                    margin: 30px 0
+                p
+                    font-size: 14px
+                    font-weight: 500
+                    color: #7b7b7b
+                    line-height: 1.5
+
+    .container-fluid
+        width: 100%
+        background-color: #fafafa
+        padding: 100px 0
+        margin-bottom: 100px
+        .container
+            @extend %container
+        .wearethebest
+            .aboutus-wearethebest
+                display: flex
+                gap: 30px 30px
+                flex-wrap: wrap
+
+                .aboutus-wearethebest--left
+                    flex: 1 0 calc(50% - 15px)
+                    width: calc(50% - 15px)
+                    min-width: 400px
+                    .gallery 
+                        max-width: 100%
+                        height: auto
+                        box-sizing: border-box
+                        .gallery-for 
+                            position: relative
+                            z-index: 10
+                            margin-bottom: 10px
+                            .gallery-container 
+                                box-sizing: border-box
+                                img
+                                    width: 100%
+                                    height: 370px
+                                    object-fit: cover
+                                    // margin-bottom: 10px
+                            .gallery-overlay
+                                opacity: 0
+                                background-color: rgba(65, 65, 65, 0.13)
+                                position: absolute
+                                top: 0
+                                left: 0
+                                width: 100%
+                                height: 100%
+                                filter: blur(0px)
+                                transition: all 0.2s ease-in
+                            &:hover
+                                .gallery-overlay
+                                    opacity: 1
+                                    transition: all 0.2s ease-in
+                        .gallery-nav
+                            .slick-slide
+                                border: 5px solid #fff
+                                text-align: center
+                                outline: none
+                                img
+                                    width: 100%
+                                    height: 150px
+                                    object-fit: cover
+                            .slick-list
+                                margin-right: -5px
+                                margin-left: -5px
+                        .slick-prev, .slick-next
+                            display: block
+                            position: absolute
+                            bottom: 40%
+                            transform: translateY(-50%)
+                            margin-top: -12px
+                            width: 30px
+                            height: 30px
+                            background-color: transparent
+                            border: none
+                            z-index: 9999
+                            color: transparent
+                        .slick-prev:before, .slick-next:before
+                            font-family: "Font Awesome 5 Free"
+                            font-weight: 900
+                            content: "\f100"
+                            color: #fff
+                            font-size: 20px
+                            padding-left: 5px
+                        .slick-next
+                            right: 20px
+                        .slick-prev
+                            left: 20px
+                        .slick-next:before
+                            content: "\f101"
+
+                .aboutus-wearethebest--right
+                    box-sizing: border-box
+                    flex: 1 0 calc(50% - 15px)
+                    width: calc(50% - 15px)
+                    .right__title
+                        box-sizing: border-box
+                        margin-bottom: 30px
+                        h3
+                            font-size: 30px
+                            font-weight: 500
+                            text-transform: uppercase
+                            margin-bottom: 35px
+                            color: #333333
+                        p
+                            font-size: 14px
+                            font-weight: 500
+                            line-height: 1.5
+                            color: #7b7b7b
+                    .aboutus-progress
+                        max-width: 70%
+                        margin-bottom: 30px
+                        .progress-title
+                            display: flex
+                            font-size: 16px
+                            font-weight: 700
+                            color: #333333
+                            margin-bottom: 10px
+                            p
+                                margin-right: auto
+                        .progress
+                            height: 8px
+                            border-radius: 8px
+                            background: #f2f2f2
+                            margin-bottom: 30px
+                            .progress-bar
+                                width: var(--value)
+                                animation: progressAnimation 2s
+                                background-color: #f1c00a
+                                border-radius: 4px
+                                height: 4px
+                                position: relative
+                                top: 50%
+                                transform: translateY(-50%)
+                                overflow: visible
+
+
+                    .aboutus-testimonal
+                        box-sizing: border-box
+                        .carousel-item
+                            display: flex
+                            gap: 20px
+                            border: 1px solid #f3f3f3
+                            padding: 25px 20px
+                            background-color: #fff
+                            justify-content: center
+                            align-items: center
+                            .item-img
+                                width: 70px
+                                height: 70px
+                                min-width: 70px
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    border-radius: 100px
+                                    object-fit: cover
+                            .item-content
+                                p
+                                    font-size: 14px
+                                    color: #7b7b7b
+                                    font-weight: 500
+                                    line-height: 2
+                                    margin-bottom: 15px
+                                span
+                                    font-size: 14px
+                                    color: #f1c00a
+                                    font-weight: 500
+                        .slick-prev, .slick-next
+                            display: block
+                            position: absolute
+                            bottom: 10%
+                            margin-top: -12px
+                            width: 30px
+                            height: 30px
+                            background-color: #f1c00a
+                            border: none
+                            z-index: 9999
+                            right: 60px
+                            color: transparent
+                        .slick-prev:before, .slick-next:before
+                            font-family: "Font Awesome 5 Free"
+                            font-weight: 900
+                            content: "\f104"
+                            color: #fff
+                            font-size: 25px
+                            padding-left: 10px
+                        .slick-next
+                            right: 20px
+                        .slick-next:before
+                            content: "\f105"
+    .container
+    .aboutus-team
+        .aboutus-team-title
+            max-width: 60%
+            text-align: center
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 75px
+            h2
+                font-size: 36px
+                font-weight: 500
+                color: #333333
+                padding-bottom: 25px
+                text-transform: uppercase
+            p
+                font-size: 14px
+                font-weight: 500
+                color: #bdbdbd
+                line-height: 2
+        .aboutus-team-card
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            gap: 100px 20px
+            .aboutus-team-item
+                flex: 1 0 32%
+                width: 100%
+                min-width: 250px
+                text-align: center
+                .team-img
+                    height: 300px
+                    margin-bottom: 30px
+                    position: relative
+                    img
+                        width: 100%
+                        height: 100%
+                        object-position: top
+                        object-fit: cover
+                        margin-bottom: 30px
+                    .team-overlay
+                        opacity: 0
+                        background-color: rgba(65, 65, 65, 0.4)
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        filter: blur(0px)
+                        transition: all 0.2s ease-in
+                        .social-icon
+                            display: flex
+                            position: absolute
+                            left: 50%
+                            top: 50%
+                            transform: translate(-50%, -50%)                            
+                            flex-wrap: nowrap
+                            gap: 25px
+                            .svg-inline--fa
+                                height: 15px
+                                color: #fff
+                                &:hover
+                                    color: #f1c00a
+                                    cursor: pointer
+                    &:hover
+                        .team-overlay
+                            opacity: 1
+                            transition: all 0.2s ease-in
+
+                h5
+                    font-size: 18px
+                    font-weight: 500
+                    color: #333333
+                    text-transform: uppercase
+                    margin-bottom: 15px
+                span
+                    font-size: 14px
+                    font-weight: 700
+                    color: #333333
+                    font-style: italic
+                    margin-bottom: 25px
+                p
+                    width: 90%
+                    margin-left: auto
+                    margin-right: auto
+                    font-size: 14px
+                    font-weight: 500
+                    color: #7b7b7b
+                    line-height: 2
+
+
+@-webkit-keyframes progressAnimation 
+    0%    
+        width: 5% 
+    100%  
+        width: var(--value)
+
+@-moz-keyframes progressAnimation 
+    0%    
+        width: 5% 
+    100%  
+        width: var(--value)
+

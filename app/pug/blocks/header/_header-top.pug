@@ -1,0 +1,63 @@
+header#header.container-fluid
+    .header-top
+        .container
+            .top-left
+                p Welcome message for your customer...
+            .top-right
+                span Language:
+                select#language-chose
+                    option(selected='')
+                        //- img(src='./images/header-top-eng.svg', alt='')
+                        |  ENGLISH
+                    option FRENCH
+                    option GERMAN
+                span Dollar: $ 
+                select#dollar
+                    option(selected='') USD
+                    option VND
+
+    .header-contact
+        .container
+            .contact-info
+                ul
+                    li
+                        i.fa.fa-envelope
+                        p  DezignElite@Gmail.com
+                    li
+                        i.fa.fa-phone
+                        p  Toll Free 0-988-345-4567
+                    li
+                        i.fa.fa-clock
+                        p  Mon - Sat 9.00 - 19.00
+            .contact-social
+                .contact-address
+                    i.fa.fa-map-marker-alt
+                    p
+                        |  32s Brooklyn St, Colins
+                        |                 Street, West Victoria, 8007-Australia.
+                .social-icon
+                    ul
+                        li
+                            a(href='')
+                            i.fab.fa-facebook-f
+                        li
+                            a(href='')
+                            i.fab.fa-twitter
+                        li
+                            a(href='')
+                            i.fab.fa-linkedin-in
+                        li
+                            a(href='')
+                            i.fab.fa-pinterest
+                        li
+                            a(href='')
+                            i.fa.fa-rss
+                        li
+                            a(href='')
+                            i.fab.fa-google-plus-g
+                        li
+                            a(href='')
+                            i.fab.fa-vimeo
+            .contact-search
+                input(type='text', name='search')
+                input(type='submit', value='Search')

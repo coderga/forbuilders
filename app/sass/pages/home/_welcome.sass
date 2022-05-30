@@ -1,0 +1,72 @@
+#welcome.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .container
+        @extend %container
+    .welcome
+        .welcome-title
+            text-align: center
+            margin-bottom: 70px
+            padding: 0 10%
+            width: 100%
+            h1
+                @include styleText(#333333,36px,500)
+                margin-bottom: 25px
+            p
+                @include styleText(#bdbdbd,14px,500)
+                line-height: 24px
+        .welcome-content
+            display: flex
+            height: 100%	
+            width: 100%
+            gap: 20px
+            justify-content: center
+            align-items: center
+            @include responsive-desktop(mobile)
+                flex-direction: column
+                width: 100%
+            .welcome-card
+                border: thin solid #f1bf09 
+                position: relative
+                min-height: 230px
+                @extend %center-flex
+                @include responsive-desktop(tablet)
+                    flex: 0 1 calc(50% - 10px)
+
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 0
+                    height: 0
+                    border-top: 130px solid #f1c00a
+                    border-right: 130px solid transparent	
+                    left: 0
+                    top: 0
+                    z-index: -99
+                .item-title
+                    min-height: 100%
+                    text-align: right
+                    padding-left: 60px
+                    padding-right: 15px
+                    h4
+                        @include styleText(#333333,18px,700)
+                        margin-bottom: 2rem
+                    p
+                        @include styleText(#7b7b7b,14px,500)
+                        line-height: 24px
+                        @extend %text-overflow-mul
+                        margin-bottom: 2rem
+                    a
+                        @include styleText(#333333,14px,600)
+                        text-decoration: none
+                        &:hover
+                            color: #f1c00a
+                .item-img
+                    position: absolute
+                    left: 15px
+                    top: 20px
+                    width: 40px
+                    height: 40px
+                    img
+                        width: 100%
+                        height: 100%

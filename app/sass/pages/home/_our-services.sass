@@ -1,0 +1,46 @@
+#services.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .container
+        @extend %container
+    .services-title
+        text-align: center
+        margin-bottom: 70px
+        padding: 0 calc(20px + 10vw)
+        h1
+            @include styleText(#333333,36px,500)
+            margin-bottom: 25px          
+        p
+            @include styleText(#bdbdbd,14px,500)
+            line-height: 24px          
+    .services-content
+        display: flex
+        gap: 30px
+        flex-wrap: wrap
+        justify-content: space-between
+        @include responsive-desktop(mobile)
+            justify-content: center
+        .items
+            flex: 1 0 calc(50% - 15px)
+            width: 100%
+            display: flex
+            gap: 18px
+            min-width: 300px
+            .items-img
+                background-color: #f1c00a
+                width: 100%
+                max-width: 70px
+                height: 100%
+                max-height: 70px
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 999px
+            .items-content
+                h5
+                    @include styleText(#333333,18px,700)
+                    margin-bottom: 25px                      
+                p
+                    @include styleText(#7b7b7b,14px,500)
+                    margin-bottom: 25px  
+                    line-height: 24px

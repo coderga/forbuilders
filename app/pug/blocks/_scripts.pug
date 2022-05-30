@@ -1,0 +1,245 @@
+script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js")
+script(type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")
+script(src="js/main.js")
+
+//- jQuery first, then Popper.js, then Bootstrap JS
+//- script(src=' ./library/bootstrap/js/jquery-3.4.1.js')
+//- script(src='./library/bootstrap/js/popper.min.js')
+
+
+-
+  var linkjs = [
+    {url: "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js",title: "swiper"},
+    {url: "./library/swiper/swiper-bundle.min.js",title: "swiper-file"},
+    {url: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js",title: "slick"},
+    {url: "./library/slick/slick.min.js",title: "slick-file"},
+    {url: "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js",title: "bootstrap"},
+    {url: "./library/bootstrap/js/bootstrap.min.js",title: "bootstrap-file"},
+    {url: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js",title: "fontawesome"},
+    {url: "./library/fontawesome/js/all.min.js",title: "fontawesome-file"},
+    {url: "https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js",title: "aos"},
+    {url: "./library/AOS/aos.js",title: "aos-file"},
+  ]
+
+each item in printlist
+  each url,count in linkjs
+    if item === url.title
+      +breakline
+      <!-- Link to #{item.toUpperCase()} js-->
+      script(src= url.url)
+
+
+
+
+
+
+
+
+//- AOS Animate On Scroll Library
+script.
+  //- AOS.init();
+  AOS.init({
+    disable: 'mobile'
+  })
+
+
+//-back to top
+script(src='./js/back-to-top.js')
+
+
+//-slick -------------//
+script(type='text/javascript').
+  $(document).ready(function(){
+
+
+    $('.slick-slider').slick({
+      arrows: true,
+      slidesToShow: true,
+      dots: true,
+      infinite: false, 
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      //- autoplay: true,
+      autoplaySpeed: 2000,
+    });
+
+
+    $('.feature-carousel').slick({
+      arrows: false, //- true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      infinite: true,
+      speed: 500,
+      cssEase: 'linear',
+      dots: true,
+      vertical:false,
+      //- fade: false,
+
+      responsive: [
+      {
+          breakpoint: 1024,
+          settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+          }
+      },
+      {
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+          }
+      },
+      {
+          breakpoint: 576,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+          }
+      }
+
+      ]
+
+
+
+
+    });
+
+    $('.testimonal-slider').slick({
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      speed: 500,
+      cssEase: 'linear',
+      dots: true,
+      vertical:true,
+      verticalSwiping: true
+    });
+
+
+
+    $('.gallery-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      // fade: true,
+      asNavFor: '.gallery-nav'
+    });
+    $('.gallery-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.gallery-for',
+      dots: false,
+      centerMode: true,
+      arrows: false,
+      focusOnSelect: true,
+      centerPadding: '0px',
+    });
+
+
+    $('.aboutus-testimonal').slick();
+    });
+
+
+//- services categories on off
+script.
+  function categoriesOnOff() {
+    var x = document.getElementById("categories-item");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
+
+//--- Navbar
+
+script.
+  function navBaradd() {
+  var x = document.getElementById("navbarId");
+  if (x.className === "navbar-list") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar-list";
+  }
+  }
+
+
+
+//- Initialize Swiper
+
+// Initialize Swiper
+script.
+  var swiper = new Swiper(".swiper-testimonal", {
+  direction: "vertical",
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 0,
+  mousewheel: true,
+  pagination: {
+  el: ".swiper-testimonal__pagination",
+  clickable: true,
+  },
+  });
+  var swiper = new Swiper(".swiper-feature", {
+  // slidesPerView: 1,
+  // spaceBetween: 0,
+  navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+  640: {
+  slidesPerView: 2,
+  },
+  768: {
+  slidesPerView: 4,
+  },
+  1024: {
+  slidesPerView: 5,
+  },
+  },
+  });
+
+
+
+
+script.
+  window.onscroll = function () {
+  myFunction();
+  };
+  function myFunction() {
+  if (
+  document.body.scrollTop > 0 ||
+  document.documentElement.scrollTop > 0
+  ) {
+  document.getElementById("navbaradd").classList.add("navbar__add");
+  } else {
+  document.getElementById("navbaradd").classList.remove("navbar__add");
+  }
+  }
+
+
+
+script.
+  function reveal() {
+    var reveals = document.querySelectorAll("#items-progress");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("progress-bar");
+      } else {
+        reveals[i].classList.remove("progress-bar");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);

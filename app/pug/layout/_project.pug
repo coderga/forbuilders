@@ -1,0 +1,41 @@
+block mixins
+	include ../blocks/_mixins
+block vars
+	-title = 'Site'
+	-bodyClass = ''
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title=title
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="robots", content="index, follow")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no")
+		link(rel="icon", href="favicon-16x16.png", type="image/x-icon", sizes="16x16")
+		//-- google fonts
+		link(rel='preconnect', href='https://fonts.gstatic.com')
+		link(href='https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap', rel='stylesheet')
+		script(src='https://code.jquery.com/jquery-2.1.4.js')
+
+		//- reset style
+		link(rel="stylesheet", href="css/reset.css")
+
+		//- add new library css
+		block head 
+			include ../blocks/_library-link
+
+		//- main styles
+		link(rel="stylesheet", href="css/styles.css")
+
+
+	body(class=bodyClass)
+		.wrapper
+			block header
+				include ../blocks/header/_header-top
+				include ../blocks/header/_menu
+			block content
+			block footer
+				include ../blocks/footer/_footer
+		include ../blocks/_scripts

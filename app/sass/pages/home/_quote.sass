@@ -1,0 +1,42 @@
+#quote.container-fluid
+    width: 100%
+    background-color: #f4f4f4
+    margin-bottom: 70px
+    font-size: calc(1rem + 1vw)
+    padding: 1em 0
+    .container
+        @extend %container
+        .quote
+            display: flex
+            align-items: center
+            @include responsive-desktop(tablet)
+                text-align: center
+                flex-direction: column
+                justify-content: center
+                align-items: center
+            h3
+                @include styleText(#333333,calc(0.8rem + 1vw),700)
+                text-transform: uppercase
+                margin-right: auto
+                @include responsive-desktop(tablet)
+                    margin-right: 0
+                    text-align: center
+                    margin-bottom: 1em
+            button
+                @include styleText(#fff,14px,700)
+                background-color: #f1bf09
+                border: 1px solid transparent
+                padding: calc(0.8rem + 0.5vw) calc(1.5rem + 1.5vw)
+                display: inline-block
+                white-space: nowrap
+                width: fit-content
+                transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out          
+                @include responsive-desktop(tablet)
+                    justify-content: center
+                    align-content: center
+                &:hover
+                    color: #f1bf09
+                    border: 1px solid #f1bf09
+                    background-color: transparent
+                    background-image: none
+                    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out

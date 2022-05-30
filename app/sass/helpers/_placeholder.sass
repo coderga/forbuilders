@@ -1,0 +1,61 @@
+
+
+%container
+    margin-left: auto
+    margin-right: auto
+    height: auto
+    width: 80%
+    @include responsive-desktop(tablet)
+        width: 100%
+        padding: 0 15px
+
+%h1
+    margin: 0
+    font-size: 35px
+    color: var(--h1-color)
+    font-weight: var(--h1-weight)
+    line-height: 1.5
+
+//- center with flexbox
+%center-flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+//- center with grid
+%center-grid
+    display: grid
+    place-items: center
+
+//- center with position
+%center-posx
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+%center-posy
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+%center-posxy
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+//- text overflow with ...
+%text-overflow
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+//- Multiple line text overflow with ...
+%text-overflow-mul
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    //- change number of row 
+    -webkit-line-clamp: 3 
+    overflow: hidden
+    text-overflow: ellipsis
+    

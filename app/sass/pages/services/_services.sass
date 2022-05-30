@@ -1,0 +1,101 @@
+#services.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .breadcrumb
+        background-image: url(../images/project-bg.png)
+        height: fit-content
+        padding: 55px 0
+        text-align: center
+        margin-bottom: 100px
+        .breadcrumb-content
+            h1
+                font-size: 24px
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 30px
+            p
+                font-size: 16px
+                color: #f1c00a
+                i
+                .svg-inline--fa
+                    color: #333333
+                    padding: 0 10px
+                span
+                    color: #333333
+    .services-categories
+        display: flex
+        gap: 30px
+        .services-left 
+            flex: 1 0 calc(25% - 20px)
+        .services-content--all
+            font-size: 18px
+            color: #bdbdbd
+            font-weight: 500
+            display: flex
+            margin-bottom: 2px
+            border: 1px solid #f1c00a
+            h5
+                padding-left: 28px
+                border-right: 1px solid #f1c00a
+                width: calc(100% - 60px)
+                padding: 20px
+            .item-img,.categories-img
+                width: 60px
+                height: 60px
+                position: relative
+                img
+                    @extend %center-posxy
+                    filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(363%) hue-rotate(139deg) brightness(98%) contrast(86%)
+            .categories-img
+                background-color: #f3f3f3
+                .svg-inline--fa
+                    @extend %center-posxy
+                    color: #000
+                    font-size: 25px
+            &:not(.content-categories):hover
+                h5
+                    color: #f1c00a
+                    cursor: pointer
+                img
+                    filter: brightness(0) saturate(100%) invert(85%) sepia(18%) saturate(2623%) hue-rotate(351deg) brightness(95%) contrast(100%)
+                    //- filter color generator
+                    //- https://angel-rs.github.io/css-color-filter-generator/
+        .content-categories
+            h5
+                background-color: #f1c00a
+                color: #fff
+        #categories-item
+            display: block
+
+        .services-right
+            flex: 1 0 calc(75% - 60px)
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            gap: 70px 30px
+            .services-content-item
+                max-width: 270px
+                h5
+                    font-size: 18px
+                    color: #333333
+                    font-weight: 700
+                    margin-bottom: 30px
+                img
+                    width: 270px
+                    height: 170px
+                    object-fit: cover
+                    margin-bottom: 25px
+                p
+                    font-size: 14px
+                    font-weight: 500
+                    color: #7b7b7b
+                    line-height: 2
+                    margin-bottom: 30px
+                a
+                    font-size: 14px
+                    font-weight: 700
+                    color: #333333
+                    text-decoration: none
+                    display: block
+                    &:hover
+                        color: #f1c00a

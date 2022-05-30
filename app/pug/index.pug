@@ -1,0 +1,21 @@
+extends layout/_layout
+
+block vars
+	-title = 'Home Project'
+	-bodyClass = ''
+	-currentPage = 'index.html'
+block content
+	block welcome
+		include blocks/home/_welcome
+	block quote
+		include blocks/home/_quote
+	block our-feature-works
+		include blocks/home/_our-feature-works
+	block testimonal
+		include blocks/home/_testimonal
+	block our-ervices
+		include blocks/home/_our-services
+	block interested
+		include blocks/home/_interested
+	block supporting
+		include blocks/home/_supporting

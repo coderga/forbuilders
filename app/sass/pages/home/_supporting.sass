@@ -1,0 +1,45 @@
+#support.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .container
+        @extend %container
+        display: flex
+        flex-wrap: wrap
+        @include responsive-desktop(tablet)
+            display: block
+            .support-title
+                h2
+                    text-align: center !important
+            .support-logo
+                margin-right: auto
+                width: 100% !important
+                justify-content: center !important
+        .support-title
+            text-align: center
+            max-width: 100%
+            // text-align: left
+            margin-right: auto
+            h2
+                @include styleText(#333333,36px,500)
+                margin-bottom: 30px
+                line-height: 48px
+                text-align: left
+                span
+                    color: #f1c00a
+                    display: block
+        .support-logo
+            margin-left: auto
+            display: flex
+            gap: 30px
+            flex-wrap: wrap
+            width: 60%
+            justify-content: flex-end
+            .logo-item
+                width: 170px
+                height: 70px
+                border: thin solid #f3f3f3
+                display: flex
+                justify-content: center
+                align-items: center
+                &:hover
+                    border-color: #f1c00a

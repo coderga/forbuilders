@@ -1,0 +1,21 @@
+
+//- nav bar link mixin
+- var navbar = [{url: "#home",title: "Home"},{url: "#about",title: "About"},{url: "#skills",title: "Skills"},{url: "#portfolio",title: "Portfolio"},{url: "#contact",title: "Contact"}];
+
+mixin navbar-top(nav)
+    if(nav.url == index)
+        li.active
+            a.nav-link(href=nav.url)= nav.title
+    else 
+        li 
+            a.nav-link(href=nav.url) #{nav.title}
+    block
+
+
+
+mixin breakline
+    //- | #{'\n'}
+    block 
+    | #{'\n\t'}
+
+

@@ -1,0 +1,115 @@
+#contact.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .contact-map
+        img
+            width: 100%
+            height: auto
+            min-height: 300px
+            object-position: center
+            object-fit: cover
+            margin-bottom: 70px
+    .container
+        @extend %container
+    .contact-info
+        text-align: center
+        h1
+            font-size: 36px
+            margin-bottom: 50px
+    .info-content
+        display: flex
+        justify-content: space-between
+        margin-bottom: 105px
+        @include responsive-desktop(mobile)
+            display: block
+            margin-bottom: 100px
+        .info-content-item
+            text-align: center
+            margin-bottom: 30px
+            i
+                max-width: 80px
+                min-height: 80px
+            .svg-inline--fa
+                height: 18px
+                width: 18px
+                padding: 20px
+                background-color: #fafafa
+                border-radius: 80px
+                margin-bottom: 30px
+                color: #333333
+
+            h4
+                font-size: 18px
+                font-weight: 500
+                margin-bottom: 30px
+                text-transform: uppercase
+                color: #333333
+            p
+                font-size: 14px
+                font-weight: 500
+                color: #7b7b7b
+            @include responsive-desktop(mobile)
+                .svg-inline--fa
+                    margin-bottom: 10px
+                h4
+                    margin-bottom: 10px
+    .contact-messenge
+        @extend %container
+        h1
+            font-size: 36px
+            margin-bottom: 50px        
+            text-align: center    
+        .contact-form
+        p
+            font-size: 14px
+            font-weight: 500
+            padding-bottom: 20px
+        form
+            .form-input
+                display: flex
+                flex-wrap: wrap
+                gap: 30px
+                height: fit-content
+                margin-bottom: 20px
+                .input-group
+                    flex: 1 0 50px
+                    width: 100%
+                    min-width: 300px
+                    input
+                        display: block
+                        margin-bottom: 20px
+                        width: 100%
+                        padding: 20px
+                        padding-left: 10px
+                        font-size: 14px
+                        font-family: 'Roboto Condensed', sans-serif
+                        border: thin solid #000
+                        outline: none
+                        &:last-child
+                            margin-bottom: 0
+                .input-textarea
+                    flex: 1 0 50px
+                    min-width: 300px
+                    textarea
+                        font-family: 'Roboto Condensed', sans-serif
+                        width: 100%
+                        height: 100%
+                        font-size: 14px
+                        padding: 20px 10px
+                        resize: none
+                        border: thin solid #000
+                        outline: none                        
+            button
+                display: block
+                margin-left: auto
+                padding: 10px 20px
+                color: #fff
+                background-color: #f1c00a
+                border: 1px solid #f1c00a
+                transition: all 0.2s linear
+                &:hover
+                    cursor: pointer
+                    background-color: transparent
+                    border: 1px solid #f1c00a
+                    color: #f1c00a
+                    transition: all 0.2s linear

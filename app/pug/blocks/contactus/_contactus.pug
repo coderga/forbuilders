@@ -1,0 +1,31 @@
+#contact.container-fluid
+  .contact-map
+    img(src='./images/contactus-map.png', alt='')
+  .container.contact-info
+    h1 Contact Info
+    .info-content
+      .info-content-item
+        i.fa.fa-map-marker-alt
+        h4 address
+        p 16122 Collins Street WestVictoria 8007 Australia
+      .info-content-item
+        i.fa.fa-phone
+        h4 CALL US
+        p +61 3 8376 6284 , 0-988-345-4567
+      .info-content-item
+        i.fa.fa-envelope
+        h4 EMAIL
+        p ForBuilders@ForestThemes.com
+  .contact-messenge
+    h1 Leave a Message to Us
+    .contact-form
+      p Fields marked with a * are mandatory
+      form(action='#')
+        .form-input
+          .input-group
+            input(type='text', placeholder='Enter Your Name *')
+            input(type='text', placeholder='Enter Email *')
+            input(type='text', placeholder='Subject')
+          .input-textarea
+            textarea#subject(name='subject', placeholder='Messgae Here *')
+        button.btn-send Send Message

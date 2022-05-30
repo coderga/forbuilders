@@ -1,0 +1,172 @@
+#project.container-fluid
+    width: 100%
+    margin-bottom: 100px
+    .breadcrumb
+        background-image: url(../images/project-bg.png)
+        height: fit-content
+        padding: 55px 0
+        text-align: center
+        margin-bottom: 140px
+        .breadcrumb-content
+            h1
+                font-size: 24px
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 35px
+            p
+                font-size: 16px
+                color: #f1c00a
+                i
+                .svg-inline--fa
+                    color: #333333
+                    padding: 0 10px
+                span
+                    color: #333333
+    .project-content
+        @extend %container
+        .project-content-menu
+            margin-bottom: 70px
+            ul
+                list-style: none
+                display: flex
+                gap: 40px 30px
+                justify-content: center
+                align-items: center
+                flex-wrap: wrap
+                li
+                    padding: 12px 20px
+                    background-color: #fafafa
+                    display: block
+                    position: relative
+                    a
+                        text-decoration: none
+                        color: #333333
+                        font-size: 14px
+                        font-weight: 700
+                    &:hover
+                        background-color: #f1c00a
+                        a
+                            color: #fff
+                        .style__number
+                            opacity: 1
+                        
+                    .style__number
+                        opacity: 0
+                        position: absolute
+                        top: -40px
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 30px
+                        height: 30px
+                        background-color: #f1c00a
+                        p
+                            font-size: 14px
+                            color: #fff
+                            font-weight: 700
+                            text-align: center
+                            padding-top: 8px
+                        &::after
+                            content: ""
+                            width: 0
+                            height: 0
+                            border-left: 5px solid transparent
+                            border-right: 5px solid transparent
+                            border-top: 5px solid #f1c00a
+                            position: relative
+                            bottom: -14px
+                            left: 8px
+                            z-index: 1
+
+    .project-content-img
+        display: flex
+        flex-wrap: wrap     
+        justify-content: space-between
+        margin-bottom: calc(60px - 2%)
+        .project_img
+            width: 32%
+            height: auto
+            margin-bottom: 2%
+            position: relative
+            min-width: 190px
+            @include responsive-desktop(tablet)
+                width: calc(50% - 10px)
+            @include responsive-desktop(mobile)
+                width: 100%              
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                
+            &:hover
+                .project_img--overlay
+                    opacity: 1
+        .project_img--overlay
+            opacity: 0
+            background-color: rgba(241, 192, 10, 0.8)
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            filter: blur(0px)
+            transition: all 0.2s ease-in
+            .plus
+                background: #fff
+                height: 30px
+                position: relative
+                width: 2px
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+            .plus:after 
+                background: #fff
+                content: ""
+                height: 2px
+                left: -14px
+                position: absolute
+                top: 14px
+                width: 30px                
+            .project_img--hotel
+                padding: 0 20px
+                font-size: 18px
+                font-weight: 700
+                color: #fff
+                letter-spacing: 2px
+                margin-top: -10px
+                p:after
+                    display: block
+                    content: ''
+                    position: relative
+                    width: 13%
+                    display: block
+                    height: 3px
+                    background-color: #fff
+                    bottom: -10px
+            
+
+            .project_img--text
+                font-size: 14px
+                color: #fff
+                font-weight: 700
+                position: absolute
+                right: 20px
+                bottom: 20px
+                letter-spacing: 1.5px
+
+
+    .project-button
+        button
+            display: block
+            margin-left: auto
+            margin-right: auto
+            padding: 10px 20px
+            color: #fff
+            background-color: #f1c00a
+            border: 1px solid #f1c00a
+            transition: all 0.2s linear
+            &:hover
+                cursor: pointer
+                background-color: transparent
+                border: 1px solid #f1c00a
+                color: #f1c00a
+                transition: all 0.2s linear

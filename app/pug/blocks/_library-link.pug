@@ -1,0 +1,31 @@
+- var printlist = ["swiper-file","fontawesome","aos-file","animate-file","slick-file"]
+//- thêm các thư viện sử dụng vào printlist
+//- các đường dẫn thư viện css có sẵn:
+//- swiper , slick , bootstrap , fontawesome
+//- nếu các thư viện có sử dụng js thì thêm link js vào ở file script.pug
+
+-
+    var linkhead = [
+        {url: "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css",title: "swiper"},
+        {url: "./library/swiper/swiper-bundle.min.css",title: "swiper-file"},
+        {url: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css",title: "slick"},
+        {url: "./library/slick/slick.css",title: "slick-file"},
+        {url: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css",title: "bootstrap"},
+        {url: "./library/bootstrap/css/bootstrap.min.css",title: "bootstrap-file"},        
+        {url: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",title: "fontawesome"},
+        {url: "./library/fontawesome/css/all.min.css",title: "fontawesome-file"},        
+        {url: "./library/animate/animate.min.css",title: "animate-file"},        
+        {url: "https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css",title: "aos"},        
+        {url: "./library/AOS/aos.css",title: "aos-file"},        
+    ]
+
+
+
+//- print link
+each item in printlist
+    each url,count in linkhead
+        if item === url.title
+            +breakline
+            <!-- Link to #{item.toUpperCase()} css -->
+            link(rel='stylesheet', href= url.url)
+

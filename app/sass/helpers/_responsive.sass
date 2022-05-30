@@ -1,0 +1,64 @@
+$breakpoint-list: ("mobile": 576px, "tablet": 768px, "laptop": 1024px, "desktop": 1400px)
+
+
+$breakpoint: (mobile: (bp-mobile: 576px, font-mobile: 14px), tablet: (bp-tablet: 768px, font-tablet: 18px), laptop: (bp-laptop: 1200px, font-laptop: 22px), desktop: (bp-desktop: 1400px, font-desktop: 26px))
+
+
+
+//- mixin responsive 
+@mixin responsive-font($screen) 
+    @each $keys, $map in $breakpoint
+        @if ($keys == $screen)
+            $value: map-get($map, bp-#{$screen})
+            $i: index($breakpoint, ($screen $map))
+            @if $i - 1 == 0
+                @media (max-width: ($value - 0.02px))
+                    @content
+            @else
+                $be-screen: nth(map-keys($breakpoint), ($i - 1))
+                $be-value: map-get(nth(map-values($breakpoint), ($i - 1)), bp-#{$be-screen})
+                @media (min-width: $be-value) and (max-width: ($value - 0.02px))
+                    @content
+
+
+
+
+
+
+//- mixin responsive desktop first
+@mixin responsive-desktop($screen) 
+    @if map-has-key($map: $breakpoint-list, $key: $screen) 
+        $value: map-get($map: $breakpoint-list, $key: $screen)
+        @media (max-width: ($value - 0.02px)) 
+            @content
+    @else 
+        @warn "`{$screen}` isn't valid"
+
+
+
+
+//- mixin responsive mobile first
+@mixin responsive-mobile($screen) 
+    @if map-has-key($map: $breakpoint-list, $key: $screen) 
+        $value: map-get($map: $breakpoint-list, $key: $screen)
+        @media (min-width: $value) 
+            @content
+    @else 
+        @warn "`{$screen}` isn't valid"
+
+
+//- mixin responsive mix
+@mixin responsive-mix($screen) 
+    @if map-has-key($map: $breakpoint-list, $key: $screen) 
+        $value: map-get($map: $breakpoint-list, $key: $screen)
+        $i: index(($breakpoint-list), ($screen $value))
+        @if $i - 1 == 0
+            @media (max-width: ($value - 0.02px))
+                @content
+        @else 
+            $be-value: nth(map-values($breakpoint-list), ($i - 1))
+            @media (min-width: $be-value) and (max-width: ($value - 0.02px))
+                @content
+    @else 
+        @warn "`{$screen}` isn't valid"
+    

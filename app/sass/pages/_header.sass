@@ -1,0 +1,245 @@
+//- Header menu -//
+//- Header menu top -//
+
+
+
+
+
+#header.container-fluid
+    width: 100%        
+    .header-top
+        background-color: #2e2e2e
+        @include responsive-desktop(mobile)
+            // display: none        
+        .container
+            @extend %container
+            display: flex
+            padding-top: 16px
+            padding-bottom: 16px
+            @include styleText(#7b7b7b,14px,500)
+            .top-left
+                margin-right: auto
+                p
+            .top-right
+                span
+                select
+                    background-color: transparent
+                    border: none
+                    color: #7b7b7b
+                    outline: none
+                    option
+                        padding: 10px
+
+
+    .header-contact
+        @include responsive-desktop(mobile)
+            display: none
+        background-color: #fff
+        .container
+            @extend %container
+            display: flex
+            padding-top: 16px
+            padding-bottom: 16px
+            @include styleText(#9c9c9c,13px,600)
+            justify-content: space-between
+            flex-wrap: wrap
+            gap: 30px
+            .contact-info
+                flex: 1 0 30%
+                width: 100%
+                ul
+                    list-style: none
+                    display: flex
+                    flex-wrap: wrap
+                    gap: 30px
+                    li
+                        font-size: 1.3rem
+                        i.fa.fa-envelope
+                            margin-right: 10px
+                        p 
+                            display: inline-block
+            .contact-social
+                flex: 1 0 30%
+                width: 100%                
+                .contact-address
+                    padding-bottom: 15px
+                    i.fa.fa-map-marker-alt
+                    p
+                        display: inline-block
+                .social-icon
+                    ul
+                        list-style: none
+                        display: flex
+                        gap: 10px
+                        li
+                            width: 35px
+                            height: 35px
+                            border: 1px solid #f3f3f3
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            border-radius: 99px
+                            color: #f1c00a
+                            transition: all 0.5s ease
+                            cursor: pointer
+                            &:hover
+                                color: #fff
+                                background-color: #f1c00a
+                                border-color: #f1c00a
+                                transition: all 0.5s ease
+            .contact-search
+                flex: 1 0 30%
+                width: 100%       
+                text-align: right
+                align-self: center
+                position: relative
+                input[type="text"]
+                    height: 45px
+                    width: 100%
+                    display: inline-block
+                    border-radius: 100px
+                    outline: none
+                    box-shadow: none
+                    padding-left: 20px
+                    border: thin solid #f3f3f3
+                    &:active,
+                    &:focus,
+                    &:visited
+                        border-color: #f1c00a
+                input[type="submit"]
+                    color: #fff
+                    background-color: #f1c00a
+                    width: 90px
+                    height: 39px
+                    padding: 10px
+                    border: 0
+                    display: inline-block
+                    position: absolute
+                    right: 3px
+                    top: 3px
+                    border-radius: 100px
+                    outline: none
+                    box-shadow: none
+                input[value="Search"]
+                    font-size: 14px
+                    font-weight: 600
+    #slider.container-fluid
+        max-width: 100%
+        .slick-slider
+            .slider-item
+                img
+                    max-width: 100%
+                    max-height: 300px
+                    object-fit: cover
+
+
+#navBar.container-fluid
+    width: 100%
+    // height: 80px
+    background-color: #3e3e3e
+    @include responsive-desktop(mobile)
+        background-color: #333
+    .container
+        @extend %container
+    .topnav
+        display: flex
+        justify-content: center
+        height: 80px
+        align-items: center
+        .nav-img
+            width: 40%
+            height: 80px
+            align-self: center
+            position: relative
+            background-color: #333333
+            display: inline-block
+            height: 100%
+            vertical-align: middle
+            
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                right: -80px
+                width: 0
+                height: 0
+                border-top: 80px solid #333333
+                border-right: 80px solid transparent
+                z-index: 222222
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 15vw
+                height: 80px
+                background: #333333
+                z-index: 3
+                transform: translateX(-15vw)
+                @include responsive-desktop(mobile)
+                    width: 15px !important
+                    transform: translateX(-15px)
+
+            img
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                max-width: 100%
+                display: block
+                @include responsive-desktop(mobile)
+                    max-width: 60%
+
+
+
+
+        #navbarId.navbar-list
+            min-width: 50%
+            margin-left: auto
+            ul
+                list-style: none
+                display: flex
+                font-size: 14px
+                font-weight: 500
+                justify-content: space-between
+                li
+                    a
+                        text-decoration: none
+                        color: #e8e8e8
+                        text-transform: uppercase
+                        white-space: nowrap      
+                        &:hover
+                            color: #f1c00a
+                    .active
+                        color: #f1c00a
+            .icon
+                display: none
+                @include responsive-desktop(mobile)
+                    display: block
+                    text-align: right
+                    .svg-inline--fa
+                        height: 2.5em
+                        color: #fff
+        @include responsive-desktop(mobile)
+            .responsive
+                position: relative
+                ul
+                    display: block
+                    flex-direction: column
+                    position: absolute
+                    right: -15px
+                    top: 40px
+                    z-index: 99
+                    width: 100vw
+                    background-color: #333
+                    padding-left: 15px
+                    li
+                        padding: 10px 0
+                .icon
+
+        @include responsive-desktop(mobile)
+            #navbarId.navbar-list
+                ul
+                    display: none
+            #navbarId.responsive
+                ul
+                    display: block                    
